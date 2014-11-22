@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fahrenheit</string>
+    <string name="stringResultValue">Результат</string>
+    <string name="stringFromValue">Исх. данные</string>
+    <string name="toFahrenheit">В гр. Фаренгейта</string>
+    <string name="toCelsius">В гр. цельсия</string>
+</resources>

@@ -4,10 +4,51 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
         >
+
     <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World, FarenheitWindow"
-            />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/stringFromValue"
+            android:id="@+id/textViewFrom"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/editTextFrom"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/stringResultValue"
+            android:id="@+id/textViewResult"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:ems="10"
+            android:id="@+id/textViewResultValue"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:weightSum="1">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toCelsius"
+                android:id="@+id/buttonCelsius"
+                android:layout_weight="0.5"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toFahrenheit"
+                android:id="@+id/buttonFahrenheit"
+                android:layout_weight="0.5"
+                />
+    </LinearLayout>
+
+
 </LinearLayout>
 

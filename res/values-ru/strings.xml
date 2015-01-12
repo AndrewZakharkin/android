@@ -5,4 +5,6 @@
     <string name="stringFromValue">Исх. данные</string>
     <string name="toFahrenheit">В гр. Фаренгейта</string>
     <string name="toCelsius">В гр. цельсия</string>
+    <string name="toMmHg">В мм. рт. ст.</string>
+    <string name="toPsi">В PSI</string>
 </resources>

@@ -5,4 +5,6 @@
     <string name="stringFromValue">From</string>
     <string name="toFahrenheit">To Fahrenheit</string>
     <string name="toCelsius">To Celsius</string>
+    <string name="toMmHg">To mmHg</string>
+    <string name="toPsi">To PSI</string>
 </resources>

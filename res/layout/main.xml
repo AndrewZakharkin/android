@@ -14,7 +14,7 @@
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberSigned"
+            android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/editTextFrom"/>
     <TextView
@@ -39,14 +39,24 @@
                 android:layout_height="wrap_content"
                 android:text="@string/toCelsius"
                 android:id="@+id/buttonCelsius"
-                android:layout_weight="0.5"/>
+                android:layout_weight="0.25"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/toFahrenheit"
                 android:id="@+id/buttonFahrenheit"
-                android:layout_weight="0.5"
+                android:layout_weight="0.25"
                 />
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toMmHg"
+                android:id="@+id/buttonMmHg"
+                android:layout_weight="0.25"/>
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toPsi"
+                android:id="@+id/buttonPsi"
+                android:layout_weight="0.25"/>
     </LinearLayout>
 
 

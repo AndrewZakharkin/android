@@ -66,7 +66,7 @@ public class LogsDataHelper extends SQLiteOpenHelper {
     }
 
     public Cursor GetData(SQLiteDatabase db) {
-        return db.rawQuery("SELECT created_at, logtext from LOGDATA", null);
+        return db.rawQuery("SELECT rowid _id, created_at, logtext from LOGDATA", null);
     }
 
     public String GetString(Cursor c) {

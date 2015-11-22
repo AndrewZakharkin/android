@@ -34,6 +34,7 @@ public class MyAccessibilityService extends AccessibilityService {
         }
         Log.i("MyAccessibilityService", "Service Connected");
         dataHelper = new LogsDataHelper(getBaseContext());
+        dataHelper.logText("Service connected");
         AccessibilityServiceInfo info = new AccessibilityServiceInfo();
         info.eventTypes = AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED;
         info.feedbackType = AccessibilityServiceInfo.FEEDBACK_SPOKEN;
@@ -44,6 +45,7 @@ public class MyAccessibilityService extends AccessibilityService {
 
     @Override
     public void onInterrupt() {
+        dataHelper.logText("Service interrupted");
         isInit = false;
     }
 }

@@ -2,10 +2,14 @@ package com.zakharkin.example.lollipop;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class FahrenheitWindow extends Activity {
     private GeneralTranslator translator = new GeneralTranslator();

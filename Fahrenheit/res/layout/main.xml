@@ -39,24 +39,34 @@
                 android:layout_height="wrap_content"
                 android:text="@string/toCelsius"
                 android:id="@+id/buttonCelsius"
+                android:onClick="buttonCelsiusOnClick"
                 android:layout_weight="0.25"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/toFahrenheit"
+                android:onClick="buttonFahrenheitOnClick"
                 android:id="@+id/buttonFahrenheit"
                 android:layout_weight="0.25"
                 />
         <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/toMmHg"
+                android:onClick="buttonMmHgOnClick"
                 android:id="@+id/buttonMmHg"
                 android:layout_weight="0.25"/>
         <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/toPsi"
+                android:onClick="buttonPsiOnClick"
                 android:id="@+id/buttonPsi"
                 android:layout_weight="0.25"/>
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ViewData"
+                android:onClick="buttonViewOnClick"
+                android:id="@+id/buttonDataView"
+        />
     </LinearLayout>
 
 

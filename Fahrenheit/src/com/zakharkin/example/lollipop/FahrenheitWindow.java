@@ -1,6 +1,7 @@
 package com.zakharkin.example.lollipop;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Looper;
 import android.view.View;
@@ -29,38 +30,31 @@ public class FahrenheitWindow extends Activity {
         editTextFrom = (EditText) findViewById(R.id.editTextFrom);
         textViewResult = (TextView) findViewById(R.id.textViewResultValue);
         resultText = (TextView) findViewById(R.id.textViewResult);
+    }
 
-        buttonCelsius.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                translate(true);
-                resultText.setText(buttonCelsius.getText());
-            }
-        });
+    public void buttonCelsiusOnClick(View view) {
+        translate(true);
+        resultText.setText(buttonCelsius.getText());
+    }
 
-        buttonFahrenheit.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                translate(false);
-                resultText.setText(buttonFahrenheit.getText());
-            }
-        });
+    public void buttonFahrenheitOnClick(View view){
+        translate(false);
+        resultText.setText(buttonFahrenheit.getText());
+    }
 
-        buttonMmHg.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                pressTranslate(true);
-                resultText.setText(buttonMmHg.getText());
-            }
-        });
+    public void buttonMmHgOnClick(View view){
+        pressTranslate(true);
+        resultText.setText(buttonMmHg.getText());
+    }
 
-        buttonPsi.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                pressTranslate(false);
-                resultText.setText(buttonPsi.getText());
-            }
-        });
+    public void buttonPsiOnClick(View view){
+        pressTranslate(false);
+        resultText.setText(buttonPsi.getText());
+    }
+
+    public void buttonViewOnClick(View view){
+        Intent intent = new Intent(FahrenheitWindow.this, DBViewer.class);
+        startActivity(intent);
     }
 
     private void translate(boolean toCelsius) {

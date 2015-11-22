@@ -9,12 +9,18 @@ import android.view.accessibility.AccessibilityEvent;
  * Created by andre on 22.11.2015.
  */
 public class MyAccessibilityService extends AccessibilityService {
+    LogsDataHelper dataHelper;
+
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
         if (event.getEventType() == AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED) {
             final String packageName = String.valueOf(event.getPackageName());
             Log.i("MyAccessibilityService", "Access Service event :" + packageName);
-            Log.i("MyAccessibilityService", "Event Text: "+event.getText());
+            Log.i("MyAccessibilityService", "Event Text: " + event.getText());
+            if(dataHelper != null) {
+                dataHelper.logText("Access Service event :" + packageName);
+                dataHelper.logText("Event Text: " + event.getText());
+            }
         }
     }
 
@@ -26,6 +32,8 @@ public class MyAccessibilityService extends AccessibilityService {
         if (isInit) {
             return;
         }
+        Log.i("MyAccessibilityService", "Service Connected");
+        dataHelper = new LogsDataHelper(getBaseContext());
         AccessibilityServiceInfo info = new AccessibilityServiceInfo();
         info.eventTypes = AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED;
         info.feedbackType = AccessibilityServiceInfo.FEEDBACK_SPOKEN;
